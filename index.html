@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Errie Tri Armawan | Machine Learning &amp; Deep Learning</title>
+  <meta name="description" content="Fresh graduate di bidang machine learning dan deep learning. Proyek Python, NLP, dan CNN.">
+  <link rel="stylesheet" href="style.css">
+  <!-- TODO: tambah font (misalnya Google Fonts) di sini kalau mau -->
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <a class="logo" href="#top">Errie Tri Armawan</a>
+    <nav class="nav">
+      <a href="#about">Tentang</a>
+      <a href="#skills">Keahlian</a>
+      <a href="#projects">Proyek</a>
+      <a href="#learning">Pembelajaran</a>
+      <a href="#contact">Kontak</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <h1>Errie Tri Armawan</h1>
+      <p class="tagline">Machine learning dan deep learning dengan Python. Saya membangun, menguji, dan mengevaluasi model, dari teks ulasan sampai gambar.</p>
+      <p class="location">Fresh graduate, Purbalingga / Purwokerto, Jawa Tengah</p>
+      <div class="actions">
+        <!-- ISI: ganti href dengan link aslimu -->
+        <a class="btn" href="https://github.com/errietriArmawan">GitHub</a>
+        <a class="btn" href="www.linkedin.com/in/errie-tri-armawan-2808a3295">LinkedIn</a>
+        <a class="btn" href="mailto:armawan.errietri@gmail.com">Email</a>
+      </div>
+      <!-- TODO (opsional): foto profil atau gambar -->
+    </section>
+
+    <!-- ============ TENTANG ============ -->
+    <section id="about">
+      <h2>Tentang Saya</h2>
+      <p>Saya lulusan STMIK Widya Utama Purwokerto S1 Teknik Informatika. Saya suka mengerjakan masalah selangkah demi selangkah: memeriksa data, membaca hasilnya, lalu memutuskan apa yang perlu diubah.</p>
+      <p>Saya memakai AI untuk membantu menulis kode. Dataset, pengujian pipeline, dan penilaian hasilnya saya tentukan sendiri.</p>
+      <p>Tugas akhir saya tentang prediksi diabetes dengan machine learning telah diterbitkan di Jurnal Pustaka AI (2026).</p>
+    </section>
+
+    <!-- ============ KEAHLIAN ============ -->
+    <section id="skills">
+      <h2>Keahlian</h2>
+      <ul class="skills">
+        <li>Python</li>
+        <li>TensorFlow / Keras</li>
+        <li>scikit-learn</li>
+        <li>NLP: TF-IDF, LSTM</li>
+        <li>Klasifikasi gambar dengan CNN</li>
+        <li>Ekspor model: TF-Lite, TFJS</li>
+        <li>Google Colab</li>
+        <li>XGBoost &amp; Random Forest</li>
+        <li>Interpretabilitas model (SHAP)</li>
+        <li>Validasi model (nested cross-validation)</li>
+        <!-- TODO: tambah keahlian lain yang benar-benar kamu kuasai -->
+      </ul>
+    </section>
+
+    <!-- ============ PROYEK ============ -->
+    <section id="projects">
+      <h2>Proyek</h2>
+
+      <article class="project">
+        <h3>Analisis sentimen ulasan Livin’ by Mandiri</h3>
+        <p>15.400 ulasan Play Store berhasil di-scraping, 6.119 di antaranya diberi label dari rating (bintang 1–2 negatif, bintang 5 positif). Kelasnya timpang, jadi saya memakai class weight seimbang.</p>
+        <p>Akurasi uji: Logistic Regression + TF-IDF 85,95%, SVM + TF-IDF n-gram 87,42%, LSTM 87,09%. LSTM cepat overfit dan tidak mengungguli model yang lebih sederhana.</p>
+        <p class="tags">Python · scikit-learn · TF-IDF · LSTM</p>
+        <a href="https://github.com/errietriArmawan/livin-mandiri-sentiment-analysis.git">Lihat di GitHub</a>
+      </article>
+
+      <article class="project">
+        <h3>Klasifikasi gambar hewan dengan CNN</h3>
+        <p>CNN yang dibangun dari nol dengan Keras Sequential, Conv2D, dan pooling, dilatih pada 4 kelas dari Animals10 (kupu-kupu, kucing, ayam, gajah). Memakai augmentasi, EarlyStopping, dan ReduceLROnPlateau.</p>
+        <p>Akurasi uji sekitar 89,5%. Model diekspor ke SavedModel, TF-Lite, dan TFJS, lengkap dengan demo inference TF-Lite.</p>
+        <p class="tags">Python · TensorFlow · Keras · CNN</p>
+        <a href="https://github.com/errietriArmawan/animal-image-classification-cnn.git">Lihat di GitHub</a>
+      </article>
+
+      <article class="project">
+        <h3>Prediksi diabetes dengan machine learning (tugas akhir, terbit di jurnal)</h3>
+        <p>Membandingkan tiga model (Logistic Regression, Random Forest, dan XGBoost) untuk memprediksi diabetes dari data klinis Pima Indians (768 pasien). Fokusnya pada evaluasi yang ketat agar hasilnya tidak terlalu optimistis: nested cross-validation dan pipeline pra-pemrosesan yang mencegah kebocoran data.</p>
+        <p>Ketiga model setara secara statistik (uji Friedman, p = 0,819), jadi Logistic Regression dipilih karena paling stabil dan paling mudah dijelaskan. Pada data uji: AUC-ROC 81,4% dan akurasi 69,5%. Menurunkan threshold ke 0,30 menaikkan recall menjadi 83,3%, cocok untuk skrining. Analisis SHAP menunjukkan glukosa dan BMI sebagai faktor paling berpengaruh, sesuai pedoman ADA dan WHO.</p>
+        <p class="tags">Python · scikit-learn · XGBoost · SHAP · Nested cross-validation</p>
+        <a href="https://github.com/errietriArmawan/nested-cv-diabetes-prediction.git">Lihat di GitHub</a>
+        ·
+        <a href="https://doi.org/10.55382/jurnalpustakaai.v6i1.1751">Baca artikel jurnal</a>
+      </article>
+
+
+      <!-- TODO: salin satu blok <article> di atas untuk proyek berikutnya (misalnya skripsi prediksi saham) -->
+    </section>
+
+    <!-- ============ PEMBELAJARAN ============ -->
+    <section id="learning">
+      <h2>Pembelajaran</h2>
+      <ul class="timeline">
+        <li>
+          <strong>Bangkit Academy 2024</strong>
+          <span>Cohort Cloud Computing, dipimpin oleh Google, GoTo, Tokopedia, dan Traveloka.</span>
+        </li>
+        <li>
+          <strong>Coding Camp 2026 oleh DBS Foundation</strong>
+          <span>Kelas Fundamental Deep Learning.</span>
+        </li>
+        <li>
+          <strong>Publikasi: Jurnal Pustaka AI, Vol. 6 No. 1 (2026), hlm. 12-24</strong>
+          <span>Evaluasi Model Machine Learning Prediksi Diabetes Menggunakan Nested Cross-Validation dan SHAP Terintegrasi (bersama Riana Safitri dan Lutvi Riyandari).</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============ KONTAK ============ -->
+    <section id="contact">
+      <h2>Kontak</h2>
+      <p>Terbuka untuk posisi entry-level di bidang data, IT support, dan administrasi.</p>
+      <a class="btn" href="mailto:armawan.errietri@gmail.com">Kirim email</a>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <p>&copy; 2026 Errie Tri Armawan</p>
+  </footer>
+
+</body>
+</html>
